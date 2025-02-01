@@ -1,0 +1,36 @@
+/********************************
+ * Footer
+ ********************************/
+
+.footer-wrapper {
+  background-color: rgba(234, 234, 234, 1);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: rgba(117, 117, 117, 1);
+  padding: 38px 128px;
+  font: 400 14px/24px Montserrat, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-links {
+  text-align: right;
+}
+
+@media (max-width: 991px) {
+  .footer-wrapper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .footer-content {
+    max-width: 100%;
+  }
+}

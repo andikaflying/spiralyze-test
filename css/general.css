@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --spacing-base: 16px;
+  font-size: 14px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.general-title {
+  font-weight: bold;
+}
+.general-title.white {
+  color: var(--color-white);
+}
+.general-title.black {
+  color: var(--color-black);
+}
+.general-title span {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+.general-title.white span {
+  -webkit-text-stroke-color: var(--color-white);
+}
+.general-title.black span {
+  -webkit-text-stroke-color: var(--color-black);
+}

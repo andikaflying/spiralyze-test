@@ -1,0 +1,96 @@
+/********************************
+ * Understanding
+ ********************************/
+.understanding-section {
+  background-color: rgba(245, 245, 245, 1);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: calc(var(--spacing-base) * 2) calc(var(--spacing-base) * 8)
+    calc(var(--spacing-base) * 8.75);
+  justify-content: space-between;
+  align-items: start;
+}
+
+.understanding-content-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.understanding-image-grid {
+  gap: 36px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: calc(var(--spacing-base) * 4);
+}
+
+.understanding-image-column {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 33%;
+  max-height: 180px;
+}
+
+.understanding-image {
+  width: 100%;
+  border-radius: 8px;
+  max-width: 371px;
+  max-height: 180px;
+}
+.understanding-section-header {
+  color: rgba(51, 51, 51, 1);
+  flex-wrap: wrap;
+  font: 700 36px/1 Montserrat, sans-serif;
+  margin-bottom: calc(var(--spacing-base) * 2);
+  display: flex;
+  flex-direction: row;
+}
+.header-text {
+  flex-grow: 0;
+  flex-basis: auto;
+  border: 1px solid rgba(51, 51, 51, 1);
+}
+.understanding-section-header > .divider {
+  width: 100%;
+  max-width: 816px;
+  height: 1px;
+  margin: auto 0 auto 27px;
+  border: 1px solid rgba(234, 234, 234, 1);
+}
+.understanding-content-grid {
+  margin-top: 32px;
+}
+
+.understanding-text-content {
+  gap: 36px;
+  display: flex;
+}
+.description-text {
+  color: rgba(51, 51, 51, 1);
+  font: 400 14px/24px Montserrat, sans-serif;
+}
+.stats-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+}
+.success-rate {
+  border-radius: 4px;
+  display: flex;
+  margin-top: 10px;
+  gap: 8px;
+  font-size: 18px;
+  color: rgba(91, 200, 175, 1);
+  font-weight: 700;
+  padding: 15px 74px 15px;
+  border: 2px solid rgba(91, 200, 175, 1);
+}
+.success-icon {
+  aspect-ratio: 1.42;
+  object-fit: contain;
+  object-position: center;
+  width: 17px;
+  margin: auto 0;
+}

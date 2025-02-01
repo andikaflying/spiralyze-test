@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .visually-hidden {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+      .hero-section {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-height: 650px;
+        width: 100%;
+        padding: 18px 0 0;
+        align-items: center;
+      }
+      .hero-background {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .nav-container {
+        position: relative;
+        display: flex;
+        width: 100%;
+        max-width: 1184px;
+        gap: 20px;
+        color: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 700 14px/41px Montserrat, sans-serif;
+      }
+      .logo {
+        aspect-ratio: 6.45;
+        object-fit: contain;
+        object-position: center;
+        width: 226px;
+        max-width: 100%;
+        margin: auto 0;
+      }
+      .nav-links {
+        display: flex;
+        gap: 31px;
+      }
+      .nav-link-active {
+        color: rgba(255, 255, 255, 1);
+      }
+      .nav-link {
+        font-weight: 400;
+      }
+      .nav-divider {
+        width: 1px;
+        height: 13px;
+        margin: auto 0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .contact-info {
+        color: rgba(91, 200, 175, 1);
+        flex-basis: auto;
+      }
+      .contact-text {
+        color: rgba(255, 255, 255, 1);
+      }
+      .main-content {
+        position: relative;
+        z-index: 10;
+        margin-top: 66px;
+        width: 100%;
+        max-width: 1184px;
+      }
+      .content-wrapper {
+        gap: 20px;
+        display: flex;
+      }
+      .left-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 56%;
+        margin-left: 0;
+      }
+      .hero-text-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        font-family: Montserrat, sans-serif;
+        color: rgba(255, 255, 255, 1);
+        margin: auto 0;
+      }
+      .hero-title {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 72px;
+        align-self: start;
+        border: 1px solid rgba(255, 255, 255, 1);
+      }
+      .hero-description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 12px;
+      }
+      .right-column {
+        display: flex;
+        flex-direction: column;
+        line-height: normal;
+        width: 44%;
+        margin-left: 20px;
+      }
+      .contact-form {
+        border-radius: 12px;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.12);
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        color: rgba(255, 255, 255, 0.7);
+        padding: 54px 28px;
+        font: 400 16px Montserrat, sans-serif;
+      }
+      .form-title {
+        color: rgba(255, 255, 255, 1);
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        align-self: center;
+      }
+      .name-group {
+        display: flex;
+        margin-top: 28px;
+        gap: 16px;
+      }
+      .input-first-name {
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        width: 200px;
+        height: 54px;
+      }
+      .input-field {
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.04);
+        padding: 14px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .contact-group {
+        display: flex;
+        margin-top: 16px;
+        gap: 16px;
+      }
+      .country-select {
+        border-radius: 2px;
+        background-color: rgba(255, 255, 255, 0.04);
+        display: flex;
+        margin-top: 16px;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 14px 17px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .select-icon {
+        aspect-ratio: 1.6;
+        object-fit: contain;
+        object-position: center;
+        width: 8px;
+        margin: auto 0;
+      }
+      .submit-button {
+        border-radius: 4px;
+        background-color: rgba(91, 200, 175, 1);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+        align-self: center;
+        display: flex;
+        margin-top: 41px;
+        width: 221px;
+        max-width: 100%;
+        gap: 8px;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 700;
+        text-align: center;
+        padding: 16px 44px;
+        border: none;
+        cursor: pointer;
+      }
+      .submit-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 24px;
+      }
+      .footer-image {
+        aspect-ratio: 16.13;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        align-self: stretch;
+      }
+      @media (max-width: 991px) {
+        .hero-section {
+          max-width: 100%;
+        }
+        .nav-container {
+          max-width: 100%;
+        }
+        .main-content {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+        .content-wrapper {
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+        }
+        .left-column {
+          width: 100%;
+        }
+        .hero-text-container {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+        .hero-title {
+          max-width: 100%;
+          font-size: 40px;
+          line-height: 50px;
+        }
+        .hero-description {
+          max-width: 100%;
+        }
+        .right-column {
+          width: 100%;
+        }
+        .contact-form {
+          max-width: 100%;
+          margin-top: 40px;
+          padding: 0 20px;
+        }
+        .input-field {
+          padding-right: 20px;
+        }
+        .submit-button {
+          margin-top: 40px;
+          padding: 0 20px;
+        }
+        .footer-image {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero-section">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4184ec89f99c61a28a8c3ab3430e5bc357830e133709b65acd6996daf60701c2?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+        alt=""
+        class="hero-background"
+      />
+      <nav class="nav-container">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/801b69b8d72a036c3160c3dda6e51666e7c6944101000833f5ee531165522985?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+          alt="Company Logo"
+          class="logo"
+        />
+        <div class="nav-links">
+          <a href="#" class="nav-link-active">HOME</a>
+          <a href="#" class="nav-link">ABOUT</a>
+          <a href="#" class="nav-link">CONTACT</a>
+          <div class="nav-divider"></div>
+          <div class="contact-info">
+            <span class="contact-text">CALL NOW FOR A CONSULT</span>
+            123.456.7890
+          </div>
+        </div>
+      </nav>
+      <div class="main-content">
+        <div class="content-wrapper">
+          <div class="left-column">
+            <div class="hero-text-container">
+              <h1 class="hero-title">GET AN INTERVENTION</h1>
+              <p class="hero-description">
+                Showing greater respect to older adults can be done in several
+                ways: acknowledging and putting to use the talents and skills of
+                older adults; creating intergenerational initiatives; and
+                allowing older adults to stay active and independent for as long
+                as possible.
+              </p>
+            </div>
+          </div>
+          <div class="right-column">
+            <form class="contact-form">
+              <h2 class="form-title">Contact Us</h2>
+              <div class="name-group">
+                <label for="firstName" class="visually-hidden"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="firstName"
+                  class="input-first-name"
+                  aria-label="First Name"
+                />
+                <label for="lastName" class="visually-hidden">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  class="input-field"
+                  aria-label="Last Name"
+                />
+              </div>
+              <div class="contact-group">
+                <label for="email" class="visually-hidden"
+                  >Business Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="input-field"
+                  aria-label="Business Email"
+                />
+                <label for="company" class="visually-hidden">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  class="input-field"
+                  aria-label="Company"
+                />
+              </div>
+              <div class="country-select" role="combobox" tabindex="0">
+                <span>Country</span>
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9819b3cdcb71d585f77c3eb632e6e84c68458a6c500dd89806076b388fb6267a?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+                  alt=""
+                  class="select-icon"
+                />
+              </div>
+              <button type="submit" class="submit-button">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/461a9249252db5aea8afe5b8ab083545054accfb165879d7e42ad594359c6436?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+                  alt=""
+                  class="submit-icon"
+                />
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/51f6c63d149ce10566256292093816b415854a679d96cb26502a7cd07c24425e?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+        alt=""
+        class="footer-image"
+      />
+    </section>
+  </body>
+</html>

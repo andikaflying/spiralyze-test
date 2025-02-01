@@ -1,0 +1,287 @@
+<style>
+  .hero-section {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 650px;
+    width: 100%;
+    padding: 18px 0 0;
+    align-items: center;
+  }
+
+  .header-bg {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    alt: "Header background image";
+  }
+
+  .nav-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1184px;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    aspect-ratio: 6.45;
+    object-fit: contain;
+    width: 226px;
+    alt: "Company logo";
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 31px;
+    color: rgba(255, 255, 255, 0.7);
+    font: 700 14px/41px Montserrat, sans-serif;
+  }
+
+  .nav-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-link.active {
+    color: #fff;
+  }
+
+  .nav-divider {
+    width: 1px;
+    height: 13px;
+    margin: auto 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .contact-info {
+    color: #5bc8af;
+    font: 700 14px/41px Montserrat, sans-serif;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    margin-top: 66px;
+    width: 100%;
+    max-width: 1184px;
+    display: flex;
+    gap: 20px;
+  }
+
+  .hero-text {
+    width: 56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+  }
+
+  .hero-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    border: 1px solid #fff;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 12px;
+  }
+
+  .contact-form {
+    width: 44%;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 54px 28px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .form-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .form-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .form-input {
+    flex: 1;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 16px;
+    color: #fff;
+  }
+
+  .form-select {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .submit-btn {
+    width: 100%;
+    max-width: 221px;
+    margin: 41px auto 0;
+    padding: 16px;
+    border-radius: 4px;
+    background: #5bc8af;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: 991px) {
+    .header-wrapper {
+      max-width: 100%;
+    }
+
+    .nav-container {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+
+    .hero-content {
+      flex-direction: column;
+      max-width: 100%;
+      padding: 0 20px;
+      margin-top: 40px;
+    }
+
+    .hero-text {
+      width: 100%;
+    }
+
+    .hero-title {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .contact-form {
+      width: 100%;
+      margin-top: 40px;
+      padding: 40px 20px;
+    }
+  }
+</style>
+
+<section class="hero-section">
+  <div class="header-wrapper">
+    <img
+      src="https://cdn.builder.io/api/v1/image/assets/TEMP/4184ec89f99c61a28a8c3ab3430e5bc357830e133709b65acd6996daf60701c2?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+      class="header-bg"
+      alt="Hero section background"
+    />
+
+    <nav class="nav-container">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/801b69b8d72a036c3160c3dda6e51666e7c6944101000833f5ee531165522985?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+        class="logo"
+        alt="Company logo"
+      />
+
+      <div class="nav-links">
+        <a href="#" class="nav-link active">HOME</a>
+        <a href="#" class="nav-link">ABOUT</a>
+        <a href="#" class="nav-link">CONTACT</a>
+        <div class="nav-divider"></div>
+        <span class="contact-info"> CALL NOW FOR A CONSULT 123.456.7890 </span>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">GET AN INTERVENTION</h1>
+        <p class="hero-description">
+          Showing greater respect to older adults can be done in several ways:
+          acknowledging and putting to use the talents and skills of older
+          adults; creating intergenerational initiatives; and allowing older
+          adults to stay active and independent for as long as possible.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <h2 class="form-title">Contact Us</h2>
+
+        <div class="form-row">
+          <input
+            type="text"
+            class="form-input"
+            placeholder="First Name"
+            aria-label="First Name"
+          />
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Last Name"
+            aria-label="Last Name"
+          />
+        </div>
+
+        <div class="form-row">
+          <input
+            type="email"
+            class="form-input"
+            placeholder="Business Email"
+            aria-label="Business Email"
+          />
+          <input
+            type="text"
+            class="form-input"
+            placeholder="Company"
+            aria-label="Company"
+          />
+        </div>
+
+        <div class="form-select">
+          <span>Country</span>
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9819b3cdcb71d585f77c3eb632e6e84c68458a6c500dd89806076b388fb6267a?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+            alt="Select dropdown icon"
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/TEMP/461a9249252db5aea8afe5b8ab083545054accfb165879d7e42ad594359c6436?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+            alt=""
+          />
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

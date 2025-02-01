@@ -1,0 +1,176 @@
+<style>
+  .contact-form-container {
+    border-radius: 0;
+    display: flex;
+    max-width: 472px;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.7);
+    font: 400 16px Montserrat, sans-serif;
+  }
+  .contact-form-wrapper {
+    border-radius: 12px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.12);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 54px 28px;
+  }
+  .contact-heading {
+    color: #fff;
+    font: 700 28px Montserrat, sans-serif;
+    text-align: center;
+    align-self: center;
+  }
+  .name-fields {
+    display: flex;
+    margin: 28px 0 0;
+    gap: 16px;
+  }
+  .first-name {
+    background-color: #fff;
+    display: flex;
+    width: 200px;
+    height: 54px;
+  }
+  .form-input {
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .contact-fields {
+    display: flex;
+    margin: 16px 0 0;
+    gap: 16px;
+  }
+  .country-select {
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.04);
+    display: flex;
+    margin: 16px 0 0;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 14px 17px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .dropdown-icon {
+    aspect-ratio: 1.6;
+    object-fit: contain;
+    object-position: center;
+    width: 8px;
+    margin: auto 0;
+  }
+  .submit-button {
+    border-radius: 4px;
+    background-color: rgb(91, 200, 175);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    align-self: center;
+    display: flex;
+    margin: 41px 0 0;
+    width: 221px;
+    max-width: 100%;
+    gap: 8px;
+    font: 700 18px Montserrat, sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 16px 44px;
+    border: none;
+    cursor: pointer;
+  }
+  .submit-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+</style>
+
+<div class="contact-form-container">
+  <form class="contact-form-wrapper">
+    <h2 class="contact-heading">Contact Us</h2>
+
+    <div class="name-fields">
+      <div class="first-name">
+        <label for="firstName" class="visually-hidden">First Name</label>
+        <input
+          type="text"
+          id="firstName"
+          class="form-input"
+          aria-label="First Name"
+          required
+        />
+      </div>
+      <div>
+        <label for="lastName" class="visually-hidden">Last Name</label>
+        <input
+          type="text"
+          id="lastName"
+          class="form-input"
+          placeholder="Last Name"
+          aria-label="Last Name"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="contact-fields">
+      <div>
+        <label for="email" class="visually-hidden">Business Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-input"
+          placeholder="Business Email"
+          aria-label="Business Email"
+          required
+        />
+      </div>
+      <div>
+        <label for="company" class="visually-hidden">Company</label>
+        <input
+          type="text"
+          id="company"
+          class="form-input"
+          placeholder="Company"
+          aria-label="Company"
+          required
+        />
+      </div>
+    </div>
+
+    <div
+      class="country-select"
+      role="combobox"
+      tabindex="0"
+      aria-label="Select Country"
+    >
+      <div>Country</div>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/9819b3cdcb71d585f77c3eb632e6e84c68458a6c500dd89806076b388fb6267a?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+        class="dropdown-icon"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
+
+    <button type="submit" class="submit-button">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/79ebdc11bf74bf2ac91f42d46a9931fc34f41392592f9f264da358242177fefa?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+        class="submit-icon"
+        alt=""
+        aria-hidden="true"
+      />
+      <span>Submit</span>
+    </button>
+  </form>
+</div>

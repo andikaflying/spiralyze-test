@@ -1,0 +1,211 @@
+<style>
+  .understanding-section {
+    background-color: rgba(245, 245, 245, 1);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+  }
+  .content-wrapper {
+    display: flex;
+    margin-bottom: -26px;
+    width: 100%;
+    max-width: 1184px;
+    flex-direction: column;
+  }
+  .image-grid {
+    gap: 20px;
+    display: flex;
+  }
+  .image-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 33%;
+  }
+  .feature-image {
+    aspect-ratio: 2.06;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    border-radius: 8px;
+    flex-grow: 1;
+  }
+  .section-header {
+    display: flex;
+    margin-top: 64px;
+    gap: 27px;
+    color: rgba(51, 51, 51, 1);
+    flex-wrap: wrap;
+    font: 700 36px/1 Montserrat, sans-serif;
+  }
+  .header-text {
+    flex-grow: 0;
+    flex-basis: auto;
+    border: 1px solid rgba(51, 51, 51, 1);
+  }
+  .divider {
+    width: 813px;
+    max-width: 100%;
+    height: 1px;
+    margin: auto 0;
+    border: 1px solid rgba(234, 234, 234, 1);
+  }
+  .content-grid {
+    margin-top: 32px;
+  }
+  .text-content {
+    gap: 20px;
+    display: flex;
+  }
+  .description-text {
+    color: rgba(51, 51, 51, 1);
+    font: 400 14px/24px Montserrat, sans-serif;
+  }
+  .stats-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+  }
+  .success-rate {
+    border-radius: 4px;
+    display: flex;
+    margin-top: 10px;
+    gap: 8px;
+    font-size: 18px;
+    color: rgba(91, 200, 175, 1);
+    font-weight: 700;
+    line-height: 2;
+    padding: 15px 74px 9px;
+    border: 2px solid rgba(91, 200, 175, 1);
+  }
+  .success-icon {
+    aspect-ratio: 1.42;
+    object-fit: contain;
+    object-position: center;
+    width: 17px;
+    margin: auto 0;
+  }
+  @media (max-width: 991px) {
+    .understanding-section {
+      max-width: 100%;
+      padding: 0 20px 100px;
+    }
+    .content-wrapper {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+    .image-grid {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .image-column {
+      width: 100%;
+    }
+    .feature-image {
+      margin-top: 36px;
+    }
+    .section-header {
+      margin-top: 40px;
+    }
+    .text-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .description-text {
+      margin-top: 35px;
+    }
+    .stats-container {
+      margin-top: 35px;
+    }
+    .success-rate {
+      padding: 0 20px;
+    }
+  }
+</style>
+
+<div class="understanding-section">
+  <div class="content-wrapper">
+    <div class="image-grid">
+      <div class="image-column">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fb4c9dcd84d2c9005e4a3bbd0fe8c79d14833b261469564b49ba77d3094029e7?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+          class="feature-image"
+          alt="Understanding elderly needs visual 1"
+        />
+      </div>
+      <div class="image-column">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c30f75c987ea31f5badd1e501fa95d6ccdc65a3e2229b68880d6149ad595c21?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+          class="feature-image"
+          alt="Understanding elderly needs visual 2"
+        />
+      </div>
+      <div class="image-column">
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/f10779127b5fa2541b608122b87d68058d999ef2f0fad93fbaca35f277bf52fa?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+          class="feature-image"
+          alt="Understanding elderly needs visual 3"
+        />
+      </div>
+    </div>
+    <div class="section-header">
+      <div class="header-text">WE UNDERSTAND</div>
+      <div class="divider"></div>
+    </div>
+    <div class="content-grid">
+      <div class="text-content">
+        <div class="image-column">
+          <div class="description-text">
+            Older adults want to play active and meaningful roles in their
+            lives, including as part of a social network, a neighborhood, and a
+            community. Service providers and policymakers must consider that a
+            lack of sense of purpose can become problematic as people age.
+            Engaging them in leisure activities and volunteer work is important.
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="description-text">
+            Older adults want to stay active and contribute to society in a
+            reciprocal manner (meaning that they want to exchange their services
+            and skills with others for the mutual benefit of the neighborhood or
+            community). Qualitative and quantitative studies published from 2005
+            to 2016 examining the social needs of older adults were eligible for
+            inclusion.
+          </div>
+        </div>
+        <div class="image-column">
+          <div class="stats-container">
+            <div class="description-text">
+              To stimulate social contacts, neighborhood initiatives can be
+              developed. Social meeting places, such as pubs and churches can
+              help to foster the development of close and peripheral
+              relationships.
+            </div>
+            <div
+              class="success-rate"
+              tabindex="0"
+              role="status"
+              aria-label="Success rate statistics"
+            >
+              <div>92% Success Rate</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/795951a846871b92e67d63d9e64666459f5b3e520ccd650f631498238baf33f3?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
+                class="success-icon"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
