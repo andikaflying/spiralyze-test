@@ -2,8 +2,7 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
-  margin: calc(var(--spacing-base) * 1.25) calc(var(--spacing-base) * 8)
-    calc(var(--spacing-base) * 8);
+  margin: 0 calc(var(--spacing-base) * 8) 0px;
 }
 
 .logo {
@@ -18,6 +17,7 @@
 .right-nav {
   display: flex;
   flex-direction: row;
+  margin: auto 0;
 }
 
 .nav-divider {
@@ -58,4 +58,30 @@
 
 .cta-contact {
   color: var(--color-cyan-medium);
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .main-nav-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 16px;
+  }
+
+  .nav-list {
+    margin-top: 6px;
+    gap: 29px;
+  }
+
+  .cta-button {
+    margin-top: 8px;
+  }
 }

@@ -13,7 +13,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: var(--color-primary);
+  background-color: var(--color-white-second);
   color: var(--color-white);
   line-height: 1.6;
 }
@@ -48,4 +48,12 @@ body {
 }
 .general-title.black span {
   -webkit-text-stroke-color: var(--color-black);
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
 }

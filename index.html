@@ -13,27 +13,56 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="main-nav">
-        <a href="/" id="logo-anchor">
-          <img src="./assets/images/logo_desktop.svg" class="logo" alt="Logo" />
-        </a>
-        <div class="right-nav">
-          <ul class="nav-list">
-            <li><a href="#" class="active">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-          <span class="nav-divider">|</span>
-          <a href="tel:123.456.7890" class="cta-button">
-            CALL NOW FOR A CONSULT <span class="cta-contact">123.456.7890</span>
-          </a>
-        </div>
-      </nav>
-    </header>
-
-    <main>
       <section class="highlight">
+        <nav class="main-nav desktop">
+          <a href="/" id="logo-anchor">
+            <img src="./assets/images/logo_desktop.svg" class="logo" alt="Logo" />
+          </a>
+          <div class="right-nav">
+            <ul class="nav-list">
+              <li><a href="#" class="active">HOME</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+            <span class="nav-divider">|</span>
+            <a href="tel:123.456.7890" class="cta-button">
+              CALL NOW FOR A CONSULT <span class="cta-contact">123.456.7890</span>
+            </a>
+          </div>
+        </nav>
+        <div class="main-nav-mobile mobile">
+          <div class="header-logo">
+            <img src="./assets/images/logo.svg" />
+          </div>
+          <div id="mobile-menu-toggle">
+            <img src="./assets/images/mobile-menu.svg" />
+          </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+          <div class="mobile-menu-close" id="mobile-menu-close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 30 30"
+              width="30px"
+              height="30px"
+            >
+              <path
+                d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="">
+            <div class="">
+              <div class="mobile-menu-item active">HOME</div>
+              <div class="mobile-menu-item">ABOUT</div>
+              <div class="mobile-menu-item">CONTACT</div>
+              <div class="header-menu-contact">
+                CALL NOW FOR A CONSULT <span>123.456.7890</span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="highlight-container">
           <article class="highlight-content">
             <img
@@ -50,66 +79,137 @@
           </article>
           <aside class="contact-form-wrapper">
             <h2>Contact Us</h2>
-            <form class="contact-form" action="#" method="POST">
-              <div class="form-group">
-                <label for="firstName" class="visually-hidden"
-                  >First Name</label
+            <form id="masthead-contact-form">
+              <div class="grid masthead-input-container">
+                <div class="custom-input-container">
+                  <label for="first-name" class="custom-label">
+                    First Name
+                  </label>
+                  <input
+                    placeholder=" "
+                    required
+                    class="custom-input"
+                    name="first-name"
+                  />
+                  <div class="custom-input-error">
+                    <div class="polygon"></div>
+                    <div class="custom-input-error-message">
+                      This field can’t be empty. <br />
+                      Please fill it in.
+                    </div>
+                  </div>
+                </div>
+                <div class="custom-input-container">
+                  <label for="last-name" class="custom-label">
+                    Last Name
+                  </label>
+                  <input
+                    placeholder=" "
+                    required
+                    class="custom-input"
+                    name="last-name"
+                  />
+                  <!-- <div class="custom-input-error">
+                    <div class="polygon"></div>
+                    <div class="custom-input-error-message">
+                      This field can’t be empty. <br />
+                      Please fill it in.
+                    </div>
+                  </div> -->
+                </div>
+                <div class="custom-input-container">
+                  <label for="email" class="custom-label">
+                    Business Email
+                  </label>
+                  <input
+                    placeholder=" "
+                    required
+                    class="custom-input"
+                    type="email"
+                    name="email"
+                  />
+                </div>
+                <div class="custom-input-container">
+                  <label for="company" class="custom-label">
+                    Company
+                  </label>
+                  <input
+                    placeholder=" "
+                    required
+                    class="custom-input"
+                    name="company"
+                  />
+                </div>
+              </div>
+              <div class="grid masthead-select-container">
+                <div class="custom-select-container">
+                  <label for="country" class="custom-label">Country</label>
+                  <select
+                    class="custom-input custom-select"
+                    name="country"
+                    required
+                  >
+                    <option disabled selected value=""></option>
+                    <option value="US">United States</option>
+                    <option value="IN">Indonesia</option>
+                    <option value="SG">Singapore</option>
+                    <option value="HK">Hongkong</option>
+                  </select>
+                  <svg
+                    width="10"
+                    height="5"
+                    viewBox="0 0 10 5"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="custom-select-icon"
+                  >
+                    <path
+                      d="M4.99995 5L0.669823 -2.18762e-06L9.33008 -1.43051e-06L4.99995 5Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <!-- <div class="custom-input-error">
+                    <div class="polygon"></div>
+                    <div class="custom-input-error-message">
+                      This field can’t be empty. Please select specific
+                      country.
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="masthead-contact-button">
+                <button
+                  id="masthead-contact-submit-button"
+                  type="submit"
+                  class="flex align-center justify-center button button-primary"
                 >
-                <input
-                  type="text"
-                  id="firstName"
-                  name="firstName"
-                  placeholder="First Name"
-                  required
-                />
-
-                <label for="lastName" class="visually-hidden">Last Name</label>
-                <input
-                  type="text"
-                  id="lastName"
-                  name="lastName"
-                  placeholder="Last Name"
-                  required
-                />
+                  <span class="flex align-center">
+                    <img src="./assets/images/send.svg" />
+                  </span>
+                  Submit
+                </button>
               </div>
-
-              <div class="form-group">
-                <label for="email" class="visually-hidden"
-                  >Business Email</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Business Email"
-                  required
-                />
-
-                <label for="company" class="visually-hidden">Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  placeholder="Company"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="country" class="visually-hidden">Country</label>
-                <select id="country" name="country" required>
-                  <option value="" disabled selected>Country</option>
-                  <option value="us">United States</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="ca">Canada</option>
-                </select>
-              </div>
-
-              <button type="submit" class="submit-button">Submit</button>
             </form>
           </aside>
         </div>
-        <div class="wave" aria-hidden="true"></div>
+        <div class="waves">
+          <img
+            src="./assets/images/wave.svg"
+            class="single-wave"
+          />
+          <!-- <img
+            src="./assets/images/wave-tablet.svg"
+            class="single-wave"
+          /> -->
+          <img
+            src="./assets/images/wave.png"
+            class="single-wave"
+          />
+          <!-- <img
+            src="./assets/images/wave-tablet.png"
+            class="single-wave"
+          /> -->
+        </div>     
       </section>
       <div class="understanding-section">
         <div class="understanding-content-wrapper">
@@ -272,9 +372,7 @@
           <div class="services-grid">
             <div class="service-box">Needs Assessment</div>
             <div class="service-box">Treatment Planning & Placement</div>
-            <div class="service-box">Transportation & Logistics</div>
-          </div>
-          <div class="services-grid">
+            <div class="service-box">Transportation & Logistics</div>  
             <div class="service-box">
               Insurance Advocacy
               <!-- <img
@@ -289,69 +387,208 @@
             </div>
             <div class="service-box">Aftercare Planning</div>
           </div>
-          
-          
         </div>
         
       </div>
-      <div>
-        <div class="video-section">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/17c35ad373390991757aee8934ba77042f1506137f15f42cf62aa34f4e330a0c?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
-            class="background-image"
-            alt=""
-          />
-          <div class="content-wrapper">
-            <div class="video-title" tabindex="0" role="button">
-              WATCH THE VIDEO
-            </div>
-            <div class="features-container">
-              <div class="icon-column">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c80ae91d59f7e62992ef30e5bf4f8567adb8ac387ef53ec64f5843713a19340?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
-                  class="feature-icon"
-                  alt="Needs Assessment Icon"
-                />
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c80ae91d59f7e62992ef30e5bf4f8567adb8ac387ef53ec64f5843713a19340?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
-                  class="feature-icon icon-spacing-1"
-                  alt="Insurance Advocacy Icon"
-                />
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c80ae91d59f7e62992ef30e5bf4f8567adb8ac387ef53ec64f5843713a19340?apiKey=5cf0f2827d7a4d3d94b8a06701432491&"
-                  class="feature-icon icon-spacing-2"
-                  alt="Treatment Planning Icon"
-                />
+      <section id="video-section" class="video-section-desktop">
+        <div class="main-container">
+          <div class="absolute video-section-right-image">
+            <div class="video-image">
+              <img src="./assets/images/video-image.jpg" />
+              <div class="video-play-icon-container" id="video-play-button">
+                <div class="video-play-icon-boxed">
+                  <div class="video-play-icon-overlay"></div>
+                  <div class="video-play-icon">
+                    <img src="./assets/images/play.svg" />
+                  </div>
+                </div>
               </div>
-              <div class="features-content">
-                <h2 class="feature-title">Needs Assessment</h2>
-                <p class="feature-description">
-                  The Advocacy Evaluation Toolkit contains the instruments used
-                  to collect data for evaluating the Consumer Voices for
-                  Coverage program.
-                </p>
-                <h2 class="feature-title feature-spacing">
-                  Insurance Advocacy
-                </h2>
-                <p class="feature-description">
-                  We are committed to advocating for appropriate coverage and
-                  payment policies.
-                </p>
-                <h2 class="feature-title feature-spacing">
-                  Treatment Planning & Placement
-                </h2>
-                <p class="feature-description">
-                  Patients can better understand medical procedures, discharge
-                  instructions, etc.
-                </p>
+            </div>
+          </div>
+  
+          <div
+            class="flex flex-wrap align-center justify-center absolute video-section-left-image"
+            style="position: absolute"
+          >
+            <svg
+              width="779"
+              height="648"
+              viewBox="0 0 779 648"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="video-wave-1"
+            >
+              <path
+                d="M0 0H742.597C655.445 274 857.597 323.5 742.597 648H0V0Z"
+                fill="white"
+                fill-opacity="0.2"
+              />
+            </svg>
+  
+            <svg
+              width="755"
+              height="648"
+              viewBox="0 0 755 648"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="video-wave-2"
+            >
+              <path
+                d="M0 0H719.719C635.252 274 831.175 323.5 719.719 648H0V0Z"
+                fill="url(#paint0_linear_377_2)"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_377_2"
+                  x1="377.5"
+                  y1="0"
+                  x2="377.5"
+                  y2="648"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#305D52" />
+                  <stop offset="1" stop-color="#153F38" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+  
+          <div class="video-section-content">
+            <div class="flex flex-wrap align-center video-section-left">
+              <div class="h-fit video-section-left-content">
+                <div class="w-full general-title white video-title">
+                  <span>WATCH</span> THE VIDEO
+                </div>
+                <div class="w-full video-list">
+                  <ul>
+                    <li>
+                      <div>
+                        <h1>Needs Assessment</h1>
+                        <p>
+                          The Advocacy Evaluation Toolkit contains the instruments
+                          used to collect data for evaluating the Consumer Voices
+                          for Coverage program.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <h1>Insurance Advocacy</h1>
+                        <p>
+                          The Advocacy Evaluation Toolkit contains the instruments
+                          used to collect data for evaluating the Consumer Voices
+                          for Coverage program.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <h1>Treatment Planning & Placement</h1>
+                        <p>
+                          Patients can better understand medical procedures,
+                          discharge instructions, etc.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+  
+      <section id="video-section" class="video-section-mobile">
+        <div class="main-container">
+          <div class="video-section-content">
+            <div class="video-section-left">
+              <div class="general-title white video-section-left-content">
+                <div class="video-title">
+                  <span>WATCH</span> THE VIDEO
+                </div>
+                <div class="video-list">
+                  <ul>
+                    <li>
+                      <div>
+                        <h1>Needs Assessment</h1>
+                        <p>
+                          The Advocacy Evaluation Toolkit contains the instruments
+                          used to collect data for evaluating the Consumer Voices
+                          for Coverage program.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <h1>Insurance Advocacy</h1>
+                        <p>
+                          The Advocacy Evaluation Toolkit contains the instruments
+                          used to collect data for evaluating the Consumer Voices
+                          for Coverage program.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <h1>Treatment Planning & Placement</h1>
+                        <p>
+                          Patients can better understand medical procedures,
+                          discharge instructions, etc.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="video-section-left-wave">
+                <img src="./assets/images/video-wave-mobile.svg" />
+              </div>
+              <div class="video-section-left-wave-2">
+                <img src="./assets/images/video-wave-mobile-2.svg" />
+              </div>
+            </div>
+          </div>
+  
+          <div class="video-section-right-image">
+            <div class="h-full">
+              <img src="./assets/images/video-image.jpg" />
+              <div
+                class="video-play-icon-container"
+                id="video-play-button-mobile"
+              >
+                <div class="video-play-icon-boxed">
+                  <div class="video-play-icon-overlay"></div>
+                  <div class="video-play-icon">
+                    <img src="./assets/images/play.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <div id="video-popup" class="video-popup">
+        <div class="video-popup-close" id="video-popup-close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 30"
+            width="30px"
+            height="30px"
+          >
+            <path
+              d="M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <iframe
+          width="80%"
+          height="80%"
+          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          class="video-popup-item"
+        >
+        </iframe>
       </div>
       <div class="footer-wrapper">
         <div class="footer-content">
@@ -361,7 +598,7 @@
           </div>
         </div>
       </div>
-    </main>
     <script src="js/general.js"></script>
+    <script src="js/video.js"></script>
   </body>
 </html>

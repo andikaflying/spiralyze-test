@@ -34,3 +34,37 @@
     max-width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .footer-wrapper {
+    padding: 38px 0;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-wrapper {
+    padding: 7px 0 38px 0;
+    max-width: 100%;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+}

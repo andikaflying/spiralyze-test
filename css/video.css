@@ -1,0 +1,280 @@
+.main-container {
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+#video-section {
+  position: relative;
+}
+
+.video-section-mobile {
+  display: none;
+}
+
+.video-title {
+  font-size: 44px;
+  line-height: 52px;
+  margin-bottom: 48px;
+}
+
+.video-section-left {
+  width: calc(50% + 35px);
+  height: 648px;
+  align-items: center;
+  display: flex;
+  padding-left: 30px;
+}
+.video-section-left-content {
+  padding-right: 155px;
+}
+.video-section-left-image {
+  background: linear-gradient(180deg, #305d52 0%, #153f38 100%);
+  left: 0;
+  width: calc(50% - 35px);
+  height: 648px;
+}
+.video-wave {
+  left: 0;
+}
+
+.video-image {
+  position: relative;
+  height: 100%;
+}
+
+.video-list ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.video-list ul li h1,
+.video-list ul li p {
+  color: var(--color-white);
+}
+.video-list ul li h1 {
+  font-weight: 600;
+}
+.video-list ul li p {
+  color: #ffffffcc;
+}
+.video-list li {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.video-list li > div {
+  width: 90px;
+  flex-grow: 1;
+}
+.video-list li::before {
+  content: url("../assets/images/check.svg");
+  position: relative;
+  padding-right: 24px;
+}
+
+.video-section-right-image {
+  width: calc(50% + 70px);
+  height: 648px;
+  right: 0;
+  position: absolute;
+}
+
+.video-section-right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-section-content {
+  z-index: 2;
+  position: relative;
+}
+
+.video-play-icon-container {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 35px);
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.video-play-icon-boxed {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-play-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light_green);
+  border: 2px solid var(--color-white);
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-play-icon img {
+  height: 43.95px;
+  width: fit-content;
+}
+.video-play-icon-overlay {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #5bc8af1a;
+  border: 2px solid var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.video-play-icon-container:hover .video-play-icon-overlay {
+  width: 228px;
+  height: 228px;
+  transition: all 0.3s ease;
+}
+
+.video-popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.video-popup.active {
+  z-index: 15;
+  visibility: visible;
+  opacity: 1;
+}
+.video-popup-item {
+  z-index: 1;
+}
+.video-popup::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+}
+.video-popup-close {
+  z-index: 10;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.video-wave-1 {
+  position: absolute;
+  right: -95px;
+}
+
+.video-wave-2 {
+  position: absolute;
+  right: -70px;
+}
+
+@media (max-width: 768px) {
+  .video-section-desktop {
+    display: none;
+  }
+
+  .video-section-mobile {
+    display: block;
+  }
+
+  .video-section-mobile > .main-container {
+    width: 100%;
+  }
+
+  .video-section-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .video-list ul li p {
+    line-height: 24px;
+    font-size: 14px;
+  }
+
+  .video-title {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 36px;
+  }
+
+  .video-section-left-content {
+    padding-right: 0px;
+  }
+
+  .video-section-left-wave {
+    position: absolute;
+    height: calc(100% + 70px);
+    width: 100%;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .video-section-left-wave > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+    position: relative;
+  }
+
+  .video-section-left-wave-2 {
+    position: absolute;
+    height: calc(100% + 90px);
+    width: 100%;
+    top: 0px;
+    z-index: -2;
+  }
+
+  .video-section-left-wave-2 > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+    position: relative;
+  }
+
+  .video-section-right-image {
+    position: relative;
+    width: 100%;
+  }
+
+  .video-section-right-image > div {
+    height: 100%;
+  }
+
+  .video-play-icon-container {
+    top: 70px;
+  }
+
+  .video-play-icon {
+    background: #5bc8af;
+  }
+}
